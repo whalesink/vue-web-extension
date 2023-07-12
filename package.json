@@ -1,0 +1,50 @@
+{
+  "name": "vue-web-extension",
+  "displayName": "vue-web-extension",
+  "description": "vue-web-extension 是使用 vite + vue3 + typescript 构建浏览器插件的模板",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^16.15.0",
+    "pnpm": ">=7 <8"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "build": "vue-tsc && vite build",
+    "debug": "vue-tsc && vite build -d -m production -w"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
+    "element-plus": "^2.3.7",
+    "lodash-es": "^4.17.21",
+    "qs": "^6.11.2",
+    "vue": "^3.2.47",
+    "webextension-polyfill": "^0.10.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.240",
+    "@types/lodash-es": "^4.17.7",
+    "@types/node": "^20.4.0",
+    "@types/qs": "^6.9.7",
+    "@types/webextension-polyfill": "^0.10.1",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.15.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^2.8.2",
+    "sass": "^1.63.6",
+    "terser": "^5.18.2",
+    "typescript": "^5.0.4",
+    "unplugin-element-plus": "^0.7.1",
+    "vite": "^4.3.9",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^1.4.2"
+  }
+}

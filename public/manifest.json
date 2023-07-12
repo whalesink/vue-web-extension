@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "vue-web-extension",
+  "version": "0.0.0",
+  "description": "vue-web-extension 是使用 vite + vue3 + typescript 构建浏览器插件的模板",
+  "options_ui": {
+    "page": "src/pages/options/index.html"
+  },
+  "action": {
+    "default_title": "Popup",
+    "default_popup": "src/pages/popup/index.html",
+    "default_icon": "icon/d-32.png"
+  },
+  "icons": {
+    "16": "icon/d-16.png",
+    "32": "icon/d-32.png",
+    "48": "icon/d-48.png",
+    "128": "icon/d-128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "src/pages/content/index.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/src/pages/content/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

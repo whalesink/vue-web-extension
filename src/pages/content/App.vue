@@ -1,5 +1,8 @@
 <template>
-  <div>inject content to web pages</div>
+  <div class="title">
+    <el-icon color="#ff0000" size="20"><CloseBold /></el-icon>
+    inject content to web pages
+  </div>
 </template>
 
 <script lang="ts">
@@ -14,16 +17,15 @@ export default defineComponent({
   },
 
   setup() {
-    chrome.runtime.onInstalled.addListener(() => {
-      // chrome.browserAction.setBadgeText({ text: "1" });
-      chrome.action.setBadgeText({
-        text: "OFF",
-      });
-    });
-
     return {};
   },
 });
 </script>
 
-<!-- 不支持在content scripts中预加载样式文件，故不能在SFC中编写style -->
+<style lang="scss" scoped>
+.title {
+  color: red;
+  font-size: 22px;
+  font-weight: bold;
+}
+</style>

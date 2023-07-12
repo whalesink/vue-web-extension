@@ -1,5 +1,5 @@
 import type { Manifest } from "webextension-polyfill";
-import { version, description, displayName } from "../package.json";
+import { version, description, displayName } from "./package.json";
 
 const manifest: Manifest.WebExtensionManifest = {
   manifest_version: 3,
@@ -36,7 +36,7 @@ const manifest: Manifest.WebExtensionManifest = {
   ],
   web_accessible_resources: [
     {
-      resources: ["/src/pages/content/*"],
+      resources: ["/src/pages/content/*", "/assets/*"],
       matches: ["<all_urls>"],
     },
   ],

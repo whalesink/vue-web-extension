@@ -35,7 +35,8 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "/src/pages/content/*"
+        "/src/pages/content/*",
+        "/assets/*"
       ],
       "matches": [
         "<all_urls>"

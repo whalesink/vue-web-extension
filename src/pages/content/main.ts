@@ -9,4 +9,4 @@ const injectContent = () => {
   createApp(App).mount("#chrome-extension-vue-root");
 };
 
-window.addEventListener("load", injectContent);
+injectContent();

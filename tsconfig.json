@@ -25,7 +25,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "package.json"
+    "package.json",
+    "manifest.ts"
   ],
   "types": ["@types/chrome"],
   "references": [{ "path": "./tsconfig.node.json" }]

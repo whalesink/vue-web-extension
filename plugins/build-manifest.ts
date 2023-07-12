@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import { resolve } from "path";
-import Logger from "./logger";
-import manifest from "../src/manifest";
+import logger from "./logger";
+import manifest from "../manifest";
 import { PluginOption } from "vite";
 
 const outDir = resolve(__dirname, "..", "public");
@@ -18,7 +18,7 @@ export default function buildManifest(): PluginOption {
 
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 
-      Logger(`\n📋 Manifest file copy complete: ${manifestPath}`, "FgYellow");
+      logger(`\n📋 Manifest file copy complete: ${manifestPath}`, "FgYellow");
     },
   };
 }
